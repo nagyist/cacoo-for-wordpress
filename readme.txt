@@ -4,7 +4,7 @@ Donate link: http://cacoo.com/
 Tags: cacoo, diagram, drawing, draw, flowchart, uml, Post, page, plugin, edit, images, posts, plugin, widget, design
 Requires at least: 2.8
 Tested up to: 2.8.4
-Stable tag: 0.2
+Stable tag: 0.3
 
 == Description ==
 
