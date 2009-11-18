@@ -16,7 +16,7 @@ class Cacoo {
 			// Editor pages only
 			if ( in_array( basename($_SERVER['PHP_SELF']), apply_filters( 'vvq_editor_pages', array('post-new.php', 'page-new.php', 'post.php', 'page.php') ) ) ) {
 				wp_enqueue_script( 'jquery-ui-dialog' );
-				wp_enqueue_style( 'cacoo-jquery-ui', plugins_url('/cacoo/resources/cacoo-jquery-ui.css'), array(), $this->version, 'screen' );
+				wp_enqueue_style( 'cacoo-jquery-ui', plugins_url('/cacoo-for-wordpress/resources/cacoo-jquery-ui.css'), array(), $this->version, 'screen' );
 			}
 		}
     }
@@ -45,7 +45,7 @@ class Cacoo {
     // load TinyMCE plugin file :  editor_plugin.js (wp2.5)
     function mce_external_plugins($plugin_array) {
        //plugin function name
-       $plugin_array['Cacoo'] = plugins_url('/cacoo/resources/tinymce3/editor_plugin.js');
+       $plugin_array['Cacoo'] = plugins_url('/cacoo-for-wordpress/resources/tinymce3/editor_plugin.js');
        return $plugin_array;
     }
 	// Handle Cacoo shortcodes
