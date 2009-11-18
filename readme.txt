@@ -6,11 +6,9 @@ Requires at least: 2.8
 Tested up to: 2.8.4
 Stable tag: 0.2
 
-Cacoo is a user friendly online diagramming application. The Cacoo plugin for WordPress allows you to create diagrams and insert them into your posts.
-
 == Description ==
 
-The Cacoo plugin for WordPress works with your Cacoo account.
+Cacoo is a user friendly online diagramming application. The Cacoo plugin for WordPress allows you to create diagrams and insert them into your posts.The Cacoo plugin for WordPress works with your Cacoo account.
 
 == Installation ==
 
