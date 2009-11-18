@@ -2,10 +2,10 @@
 /*
 Plugin Name: Cacoo for WordPress
 Plugin URI: http://cacoo.com/
-Description: draw graphics, charts, diagrams plugin.
+Description: The Cacoo plugin for WordPress allows you to create diagrams and insert them into your posts.
 Author: Nulab Inc.
-Version: 0.4
-Author URI: http://www.nulab.co.jp/
+Version: 0.5
+Author URI: http://cacoo.com/
 */
 class Cacoo { 
     function Cacoo() {
