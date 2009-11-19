@@ -4,7 +4,7 @@ Plugin Name: Cacoo for WordPress
 Plugin URI: http://cacoo.com/
 Description: The Cacoo plugin for WordPress allows you to create diagrams and insert them into your posts.
 Author: Nulab Inc.
-Version: 0.6
+Version: 0.7
 Author URI: http://cacoo.com/
 */
 class Cacoo { 
@@ -36,8 +36,6 @@ class Cacoo {
          add_filter("mce_external_plugins", array(&$this, 'mce_external_plugins'));
          add_filter('mce_buttons', array(&$this, 'mce_buttons'));
        }
-		add_action('edit_form_advanced', array(&$this, 'AddQuicktagsAndFunctions') );
-		add_action('edit_page_form', array(&$this, 'AddQuicktagsAndFunctions') );
     }
     function mce_buttons($buttons) {
        // add button name
@@ -62,13 +60,6 @@ class Cacoo {
         '</iframe>'
         ;
 	}
-
-	function AddQuicktagsAndFunctions() {
-      $html = 'jQuery(document).ready(function(){' .
-		'jQuery("#ed_toolbar").append("<input type=\\"button\\" class=\\"ed_button\\" onclick=\\"\\" title=\\"\\" value=\\"Cacoo\\" />");' .
-        '};';
-      <?php echo $html; ?>
-    }
 }
 $cacoo = new Cacoo();
 add_action('init',array(&$cacoo, 'Cacoo'));

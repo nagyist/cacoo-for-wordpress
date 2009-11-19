@@ -238,7 +238,7 @@
                     author : 'Nulab Inc.',
                     authorurl : 'http://cacoo.com/',
                     infourl : 'http://cacoo.com/',
-                    version : "0.6"
+                    version : "0.7"
                 };
             },
             init : function(ed, url) {
