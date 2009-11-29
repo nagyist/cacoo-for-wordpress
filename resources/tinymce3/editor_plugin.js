@@ -16,6 +16,7 @@
             height: 300,
             sizeType: 'choice',
             theme: 'cacoo',
+            toolbar: true,
             next: function() {
                 this.page = 2;
                 view.update();
@@ -39,7 +40,7 @@
             },
             getViewerURL: function() {
                 if (this.isViewer()) {
-                    return this.url + '/view?w=' + this.width + '&h=' + this.height + '&tm=' + this.theme;
+                    return this.url + '/view?w=' + this.width + '&h=' + this.height + '&tm=' + this.theme + '&tb=' + (this.toolbar == false ? 'no' : '') ;
                 } else {
                     return this.url.substring(0, this.url.length - 4) + '-w' + this.width + '-h' + this.height + '.png';
                 }
@@ -54,15 +55,10 @@
             getViewerTag: function() {
                 var tag = '';
                 tag += '[cacoo';
-                if (this.width != 400) {
-                    tag += ' width="' + this.width + '"';
-                }
-                if (this.height != 300) {
-                    tag += ' height="' + this.height + '"';
-                }
-                if (this.theme != 'cacoo') {
-                    tag += ' theme="' + this.theme + '"';
-                }
+                tag += ' width="' + this.width + '"';
+                tag += ' height="' + this.height + '"';
+                tag += ' theme="' + this.theme + '"';
+                tag += ' toolbar=' + this.toolbar;
                 tag += ']';
                 tag += this.url;
                 tag += '[/cacoo]';
@@ -91,6 +87,10 @@
             },
             setTheme: function(theme) {
                 model.theme = theme;                    
+                view.updatePreview();
+            },
+            setToolbar: function(toolbar) {
+                model.toolbar = toolbar;                    
                 view.updatePreview();
             }
         };
@@ -123,6 +123,8 @@
                         '<span id="cacoo-dialog-size-custom" style="display:none;"><input type="text" style="width: 50px;" class="cacoo-dialog-dim" id="cacoo-dialog-width" value=""/> × <input type="text" style="width: 50px;" class="cacoo-dialog-dim" id="cacoo-dialog-height" value=""/> pixels<a href="javascript:void(0)">choice</a></span>' +
                         ' &nbsp;&nbsp;' +
                         '<span id="cacoo-dialog-theme">Theme:<label><input type="radio" name="theme" value="cacoo" checked="checked"/>Cacoo</label><label><input type="radio" name="theme" value="clear"/>Clear</label></span>' +
+                        ' &nbsp;&nbsp;' +
+                        '<span id="cacoo-dialog-toolbar"><label><input type="checkbox" name="toolbar" value="true" checked="checked"/>Show Toolbar</label><label></span>' +
                         '</p>' +
                         '<p>Preview:' + 
                         '<div class="cacoo-dialog-slide cacoo-dialog-content" id="cacoo-dialog-slide">' +
@@ -163,8 +165,10 @@
                 }
                 if (model.isViewer()) {
                     $('#cacoo-dialog-theme').show();
+                    $('#cacoo-dialog-toolbar').show();
                 } else {
                     $('#cacoo-dialog-theme').hide();
+                    $('#cacoo-dialog-toolbar').hide();
                 }
             }
         };
@@ -195,6 +199,9 @@
                 });
                 $('#cacoo-dialog input[name=theme]').change(function() {
                     model.setTheme($(this).val());
+                });
+                $('#cacoo-dialog input[name=toolbar]').change(function() {
+                    model.setToolbar(Boolean($(this).attr('checked')));
                 });
                 $('#cacoo-dialog-size-choice').change(function() {
                     var sizes = $('#cacoo-dialog-size-choice option:selected').val().split('x');

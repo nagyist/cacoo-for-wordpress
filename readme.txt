@@ -4,7 +4,7 @@ Donate link: http://cacoo.com/
 Tags: cacoo, diagram, drawing, draw, flowchart, uml, Post, page, plugin, edit, images, posts, plugin, widget, design
 Requires at least: 2.8
 Tested up to: 2.8.4
-Stable tag: 0.7
+Stable tag: 0.8
 
 == Description ==
 
@@ -34,3 +34,7 @@ Attention: [Check your site before reporting trouble, please!](http://cacoo.com/
 1. screenshot-4.png
 
 == Changelog ==
+= 0.8 2009-11-29 =
+*Added support for customize viewer toolbar.
+= 0.7 2009-11-19 =
+*The first version.
