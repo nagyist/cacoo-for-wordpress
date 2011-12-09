@@ -122,7 +122,7 @@ body .ui-resizable-autohide .ui-resizable-handle { display: none; } /* use 'body
 .ui-dialog-content {
 	/*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;
 	color: #333333;
-	padding: 1.5em 1.7em;	
+	padding: 1.5em 1.7em;
 }
 .ui-dialog-buttonpane {
 	position: absolute;
@@ -206,3 +206,80 @@ body .ui-resizable-autohide .ui-resizable-handle { display: none; } /* use 'body
 #cacoo-dialog-buttons input {
     width: 100px;
 }
+#cacoo-dialog-slide {
+    overflow: auto;
+}
+
+#cacoo-dialog-slide div.cacoo_diagram, #cacoo-dialog-choice-diagram div.cacoo_diagram {
+    display: inline;
+    width: 160px;
+    height: 170px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    border: solid 1px #eee;
+    cursor: pointer;
+}
+#cacoo-dialog-slide div.cacoo_security_private {
+/*    background-color: #aaa;*/
+}
+#cacoo-dialog-slide div.cacoo_image_box, #cacoo-dialog-choice-diagram div.cacoo_image_box {
+    text-align: center;
+    width: 141px;
+    height: 100px;
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+    padding: 10px 10px 10px 9px;
+    text-align: center;
+    text-decoration: none;
+}
+#cacoo-dialog-slide img.cacoo_preview, #cacoo-dialog-choice-diagram div.cacoo_image_box {
+    vertical-align: middle;
+    background-color: white;
+}
+#cacoo-dialog-slide img.cacoo_title, #cacoo-dialog-choice-diagram img.cacoo_title {
+    line-height: 25px;
+    height: 25px;
+    overflow: hidden;
+}
+#cacoo-dialog-slide input[type=button] {
+    float: right;
+	position: relative;
+}
+#cacoo-dialog-choice-diagram {
+    overflow: auto;
+    display:none;
+}
+
+#cacoo-dialog-filter-panel {
+    border-top: solid 1px #eee;
+}
+#cacoo-dialog-choice-dialog-back-panel {
+    border-top: solid 1px #eee;
+    display:none;
+}
+#cacoo-dialog-slide span.folderName {
+    color: #ccc;
+}
+#cacoo-dialog .warning {
+    color: red;
+}
+#cacoo-dialog button, #cacoo-dialog input[type=button],
+#cacoo-dialog input[type=reset], #cacoo-dialog input[type=submit] {
+	background: -moz-linear-gradient(top, #fff, #F1F1F1 1%, #F1F1F1 50%, #DFDFDF 99%, #ccc);
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.01, #F1F1F1), color-stop(0.5, #F1F1F1), color-stop(0.99, #DFDFDF), to(#ccc));
+	-moz-box-shadow: 1px 1px 2px #E7E7E7;
+	-webkit-box-shadow: 1px 1px 2px #E7E7E7;
+}
+#cacoo-dialog button:hover, #cacoo-dialog input[type=button]:hover,
+#cacoo-dialog input[type=reset]:hover, #cacoo-dialog input[type=submit]:hover	{
+	background: -moz-linear-gradient(top, #fff, #e1e1e1 1%, #e1e1e1 50%, #cfcfcf 99%, #ccc);
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.01, #e1e1e1), color-stop(0.5, #e1e1e1), color-stop(0.99, #cfcfcf), to(#ccc));
+}
+#cacoo-dialog button:active, #cacoo-dialog input[type=button]:active,
+#cacoo-dialog input[type=reset]:active, #cacoo-dialog input[type=submit]:active	{
+	background: #ccc;
+}
+
