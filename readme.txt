@@ -2,9 +2,9 @@
 Contributors: agattino
 Donate link: http://cacoo.com/
 Tags: cacoo, diagram, drawing, draw, flowchart, uml, Post, page, plugin, edit, images, posts, plugin, widget, design
-Requires at least: 2.8
-Tested up to: 2.8.4
-Stable tag: 1.0.0
+Requires at least: 3.2
+Tested up to: 3.2.1
+Stable tag: 1.0.1
 
 == Description ==
 
